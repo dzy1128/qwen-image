@@ -61,16 +61,16 @@ class QwenImageNode:
     def INPUT_TYPES(cls):
         return {
             "required": {
+                "text": ("STRING", {"default": "", "multiline": True}),
                 "model": (
                     ["qwen-image-2.0", "qwen-image-2.0-pro"],
                     {"default": "qwen-image-2.0"},
                 ),
-                "text": ("STRING", {"default": "", "multiline": True}),
+                "size": (list(SIZE_OPTIONS.keys()), {"default": "1:1  (1024×1024)"}),
                 "n": ("INT", {"default": 1, "min": 1, "max": 6, "step": 1}),
                 "prompt_extend": ("BOOLEAN", {"default": False}),
                 "watermark": ("BOOLEAN", {"default": False}),
                 "seed": ("INT", {"default": 0, "min": 0, "max": 2147483647}),
-                "size": (list(SIZE_OPTIONS.keys()), {"default": "1:1  (1024×1024)"}),
             },
             "optional": {
                 "image_1": ("IMAGE",),
