@@ -458,5 +458,5 @@ NODE_CLASS_MAPPINGS = {
 
 NODE_DISPLAY_NAME_MAPPINGS = {
     "QwenImage": "Qwen Image Generation",
-    "WanImage": "Wan 2.6 Image Generation",
+    "WanImage": "Wan Image Generation",
 }
